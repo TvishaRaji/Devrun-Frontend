@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a routerLink="/home">Home</a></li>
+          <li class="navbar-item"><a routerLink="/category">Browse</a></li>
+          <li class="navbar-item"><a routerLink="/landing">Google store</a></li>
+        </ul>
+      </nav>
+  <div class="container">
+    <div class="card">
+      <div *ngFor="let user of getBookData">
+        <h1>{{ user.title }}</h1>
+
+        <p><strong>Key:  </strong>{{ user.Key }}</p>
+        <p><strong>Authors:  </strong>{{ user.authors }}</p>
+        <p><strong>Language:  </strong>{{ user.language }}</p>
+        <p><strong>Categories:  </strong>{{ user.categories }}</p>
+        <p><strong>averageRating:  </strong>{{ user.averageRating }}</p>
+        <p><strong>maturityRating:  </strong>{{ user.maturityRating }}</p>
+        <p><strong>publisher:  </strong>{{ user.publisher }}</p>
+        <p><strong>publishedDate:  </strong>{{ user.publishedDate }}</p>
+        <p><strong>pageCount:  </strong>{{ user.pageCount }}</p>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

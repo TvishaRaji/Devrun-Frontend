@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+//////////////////////////////////
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: black;
+    padding: 10px;
+  }
+  
+  .navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color:white;
+  }
+  
+  .navbar-item {
+    display: inline-block;
+    margin-right: 10px;
+    color:black;
+  }
+  
+  .navbar-item a {
+    text-decoration: none;
+    color: black;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  button {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .image{
+    
+  }

@@ -1,0 +1,34 @@
+
+
+<input type="text" #searchInput (keyup)="searchProduct($event)" />
+<button (click)="submitSearch(searchInput.value)">OK</button>
+<div class="card-container">
+  <div *ngFor="let user of pagedTopUsers" class="card">
+
+    <div class="card-header">
+                 <h2>{{ user.title }}</h2>
+
+     
+    </div>
+    <div class="card-body">
+      <p>ID: {{ user.Key }}</p>
+      <p>Author: {{ user.authors }}</p>
+      <p>Category: {{ user.categories }}</p>
+      <p>averageRating: {{ user.averageRating }}</p>
+      <p>publishedDate: {{ user.publishedDate }}</p>
+      <p>pageCount: {{ user.pageCount }}</p>
+      <a routerLink="/product/{{user.Key}}">Click</a>
+
+      <button routerLink="/profile">click</button>
+    </div>
+  </div>
+</div>
+<a href="https://app.powerbi.com/groups/me/reports/f2ffed9e-5d46-4564-bb65-558972a64f2d/ReportSection?experience=power-bi" target="_blank" class="button-link">Go to</a>
+
+<mat-paginator
+  [length]="topUsers?.length"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="pageSizeOptions"
+  (page)="onPageChange($event)"
+>
+</mat-paginator>

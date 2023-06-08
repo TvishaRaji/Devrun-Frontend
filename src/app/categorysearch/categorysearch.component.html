@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+</head>
+
+
+<body>
+
+<div class="main">
+  <nav class="navbar">
+    <ul class="navbar-list">
+      <li class="navbar-item"><a routerLink="/home">Home</a></li>
+      <li class="navbar-item"><a routerLink="/category">Browse</a></li>
+      <li class="navbar-item"><a routerLink="/landing">Google store</a></li>
+    </ul>
+  </nav>
+</div>
+ 
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" (keyup)="searchProduct($event)" class="search-input" placeholder="Search..." />
+      <button class="btn btn-primary search-button">OK</button>
+    </div>
+
+    <div class="card-container">
+      <div *ngFor="let user of pagedTopUsers" class="card">
+        <div class="card-header">
+       
+            <h2>{{ user.title }}</h2>
+            <img class="size" src="data:image/png;base64,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" alt="">
+        </div>
+
+        <div class="card-body">
+          <p><strong>ID:</strong> {{ user.Key }}</p>
+        </div>
+        <div class="button-group">
+          <a class="btn btn-sm btn-primary" routerLink="/product/{{user.Key}}">Clickkk</a>
+          <span class="button-space"></span>
+          <a class="btn btn-sm btn-primary"routerLink="/profile" (click)="postData(user.Key)">Product</a>
+        </div>
+<!--         
+        <div class="card-body">
+          <p><strong>ID:</strong> {{ user.Key }}</p>
+        </div>
+        <a class="btn btn-sm btn-primary" routerLink="/product/{{user.Key}}">Clickkkk</a>
+        <span class="button-space"></span>
+
+        <a class="btn btn-sm btn-primary" (click)="fetchProductDetails(user.Key)">Product</a> -->
+      </div>
+      
+    </div>
+
+    <a href="https://app.powerbi.com/groups/me/reports/f2ffed9e-5d46-4564-bb65-558972a64f2d/ReportSection?experience=power-bi" target="_blank" class="button-link">Go to</a>
+
+    <mat-paginator
+      [length]="topUsers?.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="pageSizeOptions"
+      (page)="onPageChange($event)"
+    >
+    </mat-paginator>
+  </div>
+</body>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>

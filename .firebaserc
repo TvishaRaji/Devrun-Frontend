@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "devrev-c134a": {
+      "hosting": {
+        "books": [
+          "devrev-c134a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "devrev-c134a"
+  }
+}
